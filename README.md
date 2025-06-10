@@ -228,3 +228,58 @@ loans  age  income  mortgage_y  marital_status_other  marital_status_single
 163      1   56   51684           1                     0                      0
 236      0   44   50793           1                     0                      0
 1        2   37   28009           0                     1                      0
+
+
+
+
+
+Insurance Claims Analysis
+
+This project performs an exploratory data analysis (EDA) on an insurance claims dataset. The goal is to understand the characteristics of the data, identify potential issues, and prepare it for further modeling.
+
+## Dataset
+
+The dataset used is `insurance_part2_data.csv`. It contains 3000 rows and 10 columns with information related to insurance claims.
+
+## Project Structure
+
+* **`insurance_part2_data.csv`**: The raw dataset.
+* **Jupyter Notebook / Python Script**: Contains the code for data loading, initial exploration, and univariate analysis.
+
+## Key Findings from Initial Analysis
+
+### Data Overview
+* The dataset has 3000 entries and 10 features.
+* Memory usage is approximately 234.5 KB.
+* No missing values were found across any columns.
+
+### Data Types
+* **Numerical:** `Age`, `Commision`, `Duration`, `Sales`
+* **Categorical:** `Agency_Code`, `Type`, `Claimed`, `Channel`, `Product Name`, `Destination`
+
+### Descriptive Statistics (Numerical Columns)
+* **Age:** Ranges from 8 to 84 years, with an average of 38.
+* **Commision:** Ranges from 0 to 210.21, averaging around 14.53. Values are spread out, indicating variability.
+* **Duration:** Shows a wide range from -1 to 4580. The minimum value of -1 is an anomaly that requires further investigation and handling. The average duration is about 70.
+* **Sales:** Ranges from 0 to 539, with an average of 60.25. Sales values also exhibit significant variability.
+
+## Next Steps
+
+The next steps for this project include:
+
+1.  **Data Cleaning**: Address the anomalous `-1` value in the `Duration` column. This may involve removing the rows or imputing the values.
+2.  **Univariate Analysis (Visualizations)**:
+    * Generate **histograms** and **box plots** for numerical features (`Age`, `Commision`, `Duration`, `Sales`) to better understand their distributions and identify outliers.
+    * Create **bar plots** for categorical features (`Agency_Code`, `Type`, `Claimed`, `Channel`, `Product Name`, `Destination`) to visualize the frequency of each category.
+3.  **Bivariate and Multivariate Analysis**: Explore relationships between variables to uncover insights and prepare for predictive modeling.
+
+## How to Run
+
+1.  Ensure you have Python installed, along with the following libraries:
+    * `pandas`
+    * `numpy`
+    * `matplotlib`
+    * `seaborn`
+    * `scikit-learn`
+2.  Place `insurance_part2_data.csv` in the same directory as your Python script or Jupyter Notebook.
+3.  Run the script or notebook to reproduce the analysis.
